@@ -1,0 +1,2 @@
+class Restmanager < ApplicationRecord
+end

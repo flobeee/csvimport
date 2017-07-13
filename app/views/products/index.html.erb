@@ -2,19 +2,21 @@
 <table>
   <thead>
     <tr>
-      <th>Id</th>
       <th>Name</th>
-      <th>Price</th>
-      <th>Quantity</th>
+      <th>RecordId</th>
+      <th>Fieldname</th>
+      <th>Fieldfrom</th>
+      <th>Fieldto</th>
     </tr>
   </thead>
   <tbody>
     <% @products.each do |product| %>
       <tr>
-        <td><%= product.id %></td>
         <td><%= product.name %></td>
-        <td><%= product.price %></td>
-        <td><%= product.quantity %></td>
+        <td><%= product.recordid %></td>
+        <td><%= product.fieldname %></td>
+        <td><%= product.fieldfrom %></td>
+        <td><%= product.fieldto %></td>
       </tr>
     <% end %>
   </tbody>
