@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170710215612) do
+ActiveRecord::Schema.define(version: 20170807232722) do
 
   create_table "products", force: :cascade do |t|
     t.string   "name"
@@ -18,8 +18,21 @@ ActiveRecord::Schema.define(version: 20170710215612) do
     t.string   "fieldname"
     t.string   "fieldfrom"
     t.string   "fieldto"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "site"
+    t.string   "credentials"
+    t.string   "export"
+    t.string   "running"
+  end
+
+  create_table "restmanagers", force: :cascade do |t|
+    t.string   "site"
+    t.string   "credentials"
+    t.string   "export"
+    t.string   "running"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end

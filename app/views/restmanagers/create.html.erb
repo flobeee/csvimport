@@ -1,0 +1,14 @@
+<h1>Restmanagers#create</h1>
+<p>Find me in app/views/restmanagers/create.html.erb</p>
+<p>Find me in app/views/restmanagers/index.html.erb</p>
+<% if @restmanager.running == "1" %>
+  <%if @restmanager.export == "0" %>
+      <%= xml='</exported> Yes </exported>' %>
+    <% elsif @restmanager.export == "1" %>
+      <%= xml='<exported> No </exported>' %>
+  <% end %>
+  <%= RestClient.post 'https://requestb.in/1azh3g41', xml %>
+  <% @restmanager.update(running: "0") %>
+  <%else%>
+  <p>Already Ran</p>
+<% end %>

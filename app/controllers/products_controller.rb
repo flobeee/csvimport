@@ -5,6 +5,10 @@ class ProductsController < ApplicationController
 
   def import
     Product.import(params[:file])
-    redirect_to root_url, notice: "Products imported."
+    redirect_to root_url, notice: "Api messages running."
+  end
+
+  def product_params
+    params.require(:product).permit(:Title, :Process, :running, :export)
   end
 end

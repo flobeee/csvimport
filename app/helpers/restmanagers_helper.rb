@@ -1,0 +1,2 @@
+module RestmanagersHelper
+end
