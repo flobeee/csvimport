@@ -27,7 +27,12 @@
 <h3>Import a CSV File</h3>
   <%= form_tag import_products_path, multipart: true do %>
     <%= file_field_tag :file %>
-    <%= select_tag([["option1",1],["option2",2]]) %>
+    <%= select_tag(:object, options_for_select([['Invoices',1],['Orders',2],['Expenses',3]])) %>
+    <%= select_tag(:export, options_for_select([['Do not update Exported Flag',2],['Mark Records as Exported No',0],['Mark records as Exported Yes',1]])) %>
+    <p>Site URL</p>
+    <%= text_field_tag :site %>
+    <p>Credentials</p>
+    <%= text_field_tag :credentials %>
     <%= submit_tag "Import CSV" %>
   <% end %>
 
