@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
   end
 
   def import
-    Product.import(params[:file], params[:export], params[:site], params[:credentials], params[:object])
+    Product.import(params[:file], params[:export], params[:site], params[:credentials], params[:object], params[:fieldname], params[:fieldto])
     redirect_to root_url, notice: "Api messages running."
   end
 
