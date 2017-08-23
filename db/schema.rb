@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170815173756) do
+ActiveRecord::Schema.define(version: 20170823171249) do
 
   create_table "products", force: :cascade do |t|
-    t.string   "name"
+    t.string   "filename"
     t.integer  "recordid"
     t.string   "fieldname"
-    t.string   "fieldfrom"
+    t.string   "status"
     t.string   "fieldto"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
